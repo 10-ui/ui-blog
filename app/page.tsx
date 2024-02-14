@@ -38,7 +38,7 @@ export default function Home() {
             Hello, World!
           </h2>
           <p>
-            This is a blog that I'm building to learn about
+            This is a blog that Im building to learn about
             UI development.
           </p>
         </Card>
@@ -53,7 +53,7 @@ export default function Home() {
             Hello, World!
           </h2>
           <p>
-            This is a blog that I'm building to learn about
+            This is a blog that Im building to learn about
             UI development.
           </p>
         </Card>
@@ -68,7 +68,7 @@ export default function Home() {
             Hello, World!
           </h2>
           <p>
-            This is a blog that I'm building to learn about
+            This is a blog that Im building to learn about
             UI development.
           </p>
         </Card>
@@ -83,7 +83,7 @@ export default function Home() {
             Hello, World!
           </h2>
           <p>
-            This is a blog that I'm building to learn about
+            This is a blog that Im building to learn about
             UI development.
           </p>
         </Card>
@@ -98,7 +98,7 @@ export default function Home() {
             Hello, World!
           </h2>
           <p>
-            This is a blog that I'm building to learn about
+            This is a blog that Im building to learn about
             UI development.
           </p>
         </Card>
@@ -113,7 +113,7 @@ export default function Home() {
             Hello, World!
           </h2>
           <p>
-            This is a blog that I'm building to learn about
+            This is a blog that Im building to learn about
             UI development.
           </p>
         </Card>
