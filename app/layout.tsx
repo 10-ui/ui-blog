@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Favicon from "/public/favicon/cat.ico";
+import AppleFavicon from "/public/favicon/cat.png";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -9,7 +10,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "10-ui Blog",
   description: "frontend developer 10-ui's blog",
-  icons: [{ rel: "icon", url: Favicon.src }],
+  icons: [
+    { rel: "icon", url: Favicon.src },
+    { rel: "apple-touch-icon", url: AppleFavicon.src },
+  ],
 };
 
 export default function RootLayout({
