@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Favicon from "favicon/cat.ico";
-import AppleFavicon from "favicon/cat.png";
+import AppleFavicon from "favicon/apple-icon.png";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
