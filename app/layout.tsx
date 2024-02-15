@@ -4,6 +4,7 @@ import "./globals.css";
 import Favicon from "/public/favicon/cat.ico";
 import AppleFavicon from "/public/favicon/apple-icon.png";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={inter.className}>
+        <SpeedInsights />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
