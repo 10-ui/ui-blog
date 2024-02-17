@@ -12,9 +12,9 @@ datasource db {
 }
 
 model Blog {
-  id        Int      @id @default(autoincrement())
-  title     String
+  id        String    @id @default(dbgenerated("uuid_generate_v4()"))
+  title     String    @unique
   content   String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
 }
