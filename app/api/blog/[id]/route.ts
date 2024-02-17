@@ -1,13 +1,13 @@
 import { prisma } from "@/lib/instance";
 import { NextResponse } from "next/server";
-import { connect } from "@/app/api/blog/route";
+import { main } from "@/app/api/blog/route";
 
 //ブログを探して取得するAPI
 export const GET = async (req: Request, res: NextResponse) => {
   try {
     const id: string = req.url.split("/blog/")[1];
     console.log(id);
-    await connect();
+    await main();
     const blog = await prisma.blog.findFirst({
       where: { id: id },
     });
@@ -39,7 +39,7 @@ export const PUT = async (req: Request, res: NextResponse) => {
     const id: string = req.url.split("/blog/")[1];
     const { title, content } = await req.json();
     const updatedAt = new Date().toISOString();
-    await connect();
+    await main();
     const blog = await prisma.blog.update({
       where: { id: id },
       data: {
@@ -74,7 +74,7 @@ export const PUT = async (req: Request, res: NextResponse) => {
 export const DELETE = async (req: Request, res: NextResponse) => {
   try {
     const id: string = req.url.split("/blog/")[1];
-    await connect();
+    await main();
     const blog = await prisma.blog.delete({
       where: { id: id },
     });

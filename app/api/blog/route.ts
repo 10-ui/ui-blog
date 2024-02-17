@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/instance";
 import { NextResponse } from "next/server";
 
-export const connect = async () => {
+export const main = async () => {
   try {
     await prisma.$connect();
   } catch (error) {
@@ -13,7 +13,7 @@ export const connect = async () => {
 //ブログを全て取得するAPI
 export const GET = async (req: Request, res: NextResponse) => {
   try {
-    await connect();
+    await main();
     const blogs = await prisma.blog.findMany();
     return NextResponse.json(
       {
@@ -41,6 +41,7 @@ export const GET = async (req: Request, res: NextResponse) => {
 export const POST = async (req: Request, res: NextResponse) => {
   try {
     const { title, content } = await req.json();
+    await main();
     const blog = await prisma.blog.create({
       data: {
         title,
