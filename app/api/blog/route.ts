@@ -1,14 +1,6 @@
 import { prisma } from "@/lib/instance";
 import { NextResponse } from "next/server";
-
-export const main = async () => {
-  try {
-    await prisma.$connect();
-  } catch (error) {
-    console.error(error);
-    return Error("DB接続に失敗しました");
-  }
-};
+import { main } from "@/lib/main";
 
 //ブログを全て取得するAPI
 export const GET = async (req: Request, res: NextResponse) => {
