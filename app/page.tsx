@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 async function getAllBlogs() {
-  const res = await fetch(`http://localhost:3000/api/blog`, {
+  const res = await fetch(`https://10-ui.info/api/blog`, {
     cache: "no-store", //SSR
   });
   const data = await res.json();
