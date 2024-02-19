@@ -1,6 +1,6 @@
 import { prisma } from "@/lib/instance";
 import { NextResponse } from "next/server";
-import { main } from "@/app/api/blog/route";
+import { main } from "@/lib/instance";
 
 //ブログを探して取得するAPI
 export const GET = async (req: Request, res: NextResponse) => {
